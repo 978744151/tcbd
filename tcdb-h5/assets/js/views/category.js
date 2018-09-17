@@ -40,8 +40,7 @@ define(
 		});
 
 		var initCaegor = function () {
-			var param = null;
-
+			var param = localStorage.getItem('cateId');
 			Api.getCategories(param, function (data) {
 				var template = _.template(categoryTemplate);
 				//alert(data.result)

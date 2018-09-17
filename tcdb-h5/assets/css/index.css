@@ -403,6 +403,25 @@ body,html{
 	border-radius: 6px;
 	padding: 0;
 }
+* { touch-action: none; }
+.main-css .indexCate li{
+	height: 91px;
+	padding-top: 10px;
+	display: inline-block;
+}
+.main-css .indexCate div{
+	height: 44px;
+	width: 44px;
+	margin: 0 auto;
+}
+.main-css .indexCate span{
+	display: block;
+}
+.main-css .indexCate image{
+	height: 100%;
+	width: 100%;
+}
+
 .main-css section.mxep_block .announced_good_list li .icon_shopping_cart {
 	position: absolute;
 	right: 15px;
@@ -452,25 +471,25 @@ body,html{
 }
 
 .ui-footer .ui-row-flex .ui-col .icon_img_1 {
-	background: url("../image/index/img_footer.png") no-repeat 0 0;
+	/*background: url("../image/index/img_footer.png") no-repeat 0 0;*/
 	background-size: cover;
 	top:5px;
 }
 
 .ui-footer .ui-row-flex .ui-col .icon_img_2 {
-	background: url("../image/index/img_footer.png") no-repeat 0px -53px;
+	/*background: url("../image/index/img_footer.png") no-repeat 0px -53px;*/
 	background-size: cover;
 	top:5px;
 }
 
 .ui-footer .ui-row-flex .ui-col .icon_img_3 {
-	background: url("../image/index/img_footer.png") no-repeat 0px -109px;
+	/*background: url("../image/index/img_footer.png") no-repeat 0px -109px;*/
 	background-size: cover;
 	top:5px;
 }
 
 .ui-footer .ui-row-flex .ui-col .icon_img_4 {
-	background: url("../image/index/img_footer.png") no-repeat 0px -165px;
+	/*background: url("../image/index/img_footer.png") no-repeat 0px -165px;*/
 	background-size: cover;
 	top:5px;
 }

@@ -367,7 +367,6 @@ define(
 					type: "GET",
 					dataType: 'json',
 					success: function (data) {
-						
 						typeof success == 'function' && success(data)
 					},
 					onError: function (data) {
@@ -1081,6 +1080,7 @@ define(
 						typeof error == 'function' && error(data);
 					}
 				});
+
 			},
 
 			/**
