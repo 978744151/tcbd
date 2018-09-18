@@ -221,8 +221,8 @@ define(['zepto', 'underscore', 'backbone',
                     //token过期 刷新token
                     if( errorData.err_code == 20002 ){
 
-                        Token.getRefeshToken(1,function(data){//1 需要先判断是否登录  
-                            
+                        Token.getRefeshToken(1,function(data){//1 需要先判断是否登录
+
                             getShowAddress();
 
                         },function(data){
@@ -243,8 +243,8 @@ define(['zepto', 'underscore', 'backbone',
                     //token过期 刷新token
                     if( errorData.err_code == 20002 ){
 
-                        Token.getRefeshToken(1,function(data){//1 需要先判断是否登录  
-                            
+                        Token.getRefeshToken(1,function(data){//1 需要先判断是否登录
+
                             getShowAddress();
 
                         },function(data){

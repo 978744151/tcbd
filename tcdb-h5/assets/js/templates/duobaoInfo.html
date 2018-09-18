@@ -8,17 +8,19 @@
 
 <script id="duobao_info_item" type="text/template">
 
-		<section class="mxep_block">
+		<section class="mxep_block" style="margin: 0;">
 
 				<div class="icon_line">
-						<i class="ui-icon-return" onclick="history.back();"></i>
-						<i class="ui-icon-shoppingCart">
-								<div class="ui-badge shopping_cart_good_count">0</div>
-						</i>
-						<i class="ui-icon-share duobao_info_show"></i>
+					<img src="../../../assets/image/ic_back@3x.png" alt="" onclick="history.back();" width=24px height=24px;>
+						<!--<i class="ui-icon-return" ></i>-->
+						<!--<i class="ui-icon-shoppingCart">-->
+								<!--<div class="ui-badge shopping_cart_good_count">0</div>-->
+						<!--</i>-->
+
+					<img src="../../../assets/image/ic_fenxiang@3x.png" alt="" class="duobao_info_show" width=24px height=24px;>
 				</div>
 
-				<div class="swiper-container good_img_list" style="height: 300px;">
+				<div class="swiper-container good_img_list" style="height: 250px;">
 						<div class="swiper-wrapper">
 								<%
 								if(pictures && pictures.length > 0) {
@@ -44,7 +46,7 @@
 
 		<section class="mxep_block bg_white ui-all-whitespace ui-margin-b-20">
 
-				<div class="bg_white good_name">
+				<div class="bg_white good_name" style="font-size: 16px;">
 						<%=name%>
 				</div>
 
@@ -52,10 +54,10 @@
 
 						<div class="ui-row ui-margin-tb announced_status announced_not_start_info">
 
-								<div class="ui-row ui-margin-b ui-txt-line-height-25 ui-txt-bold unit_price"
+								<div class="ui-row ui-margin-b ui-txt-line-height-25  unit_price"
 										 data-unit_price="10">
-										<%=step%>
-										梦想币/人次
+										<span style="color: #FF7400 "><%=step%>
+										梦想币</span>/人次
 								</div>
 
 								<div class="ui-row f14 ui-txt-line-height-30">
@@ -156,27 +158,27 @@
 		<%
 		if(support_buy==1){    //1 支持原价购买 0 不支持原价购买
 		%>
-		<section class="mxep_block bg_white ui-all-whitespace ui-margin-b-20 buy_full_price_container">
+		<!--<section class="mxep_block bg_white ui-all-whitespace ui-margin-b-20 buy_full_price_container">-->
 
-				<div class="ui-row ui-txt-line-height-40 ui-txt-muted ui-border-b">
-						还可以这么买
-				</div>
+				<!--<div class="ui-row ui-txt-line-height-40 ui-txt-muted ui-border-b">-->
+						<!--还可以这么买-->
+				<!--</div>-->
 
-				<div class="ui-row ui-txt-line-height-30 ui-margin-t">
-						全价购买，无需等待，价格优惠
-				</div>
+				<!--<div class="ui-row ui-txt-line-height-30 ui-margin-t">-->
+						<!--全价购买，无需等待，价格优惠-->
+				<!--</div>-->
 
-				<div class="ui-row ui-txt-line-height-30 ui-txt-bold good_price" data-price="<%=goods_price%>">
-						￥
-						<%=goods_price%>
-				</div>
+				<!--<div class="ui-row ui-txt-line-height-30 ui-txt-bold good_price" data-price="<%=goods_price%>">-->
+						<!--￥-->
+						<!--<%=goods_price%>-->
+				<!--</div>-->
 
-				<div class="ui-txt-line-height-30 bg_fd7a44 ui-txt-white ui-border-radius-3
-				 ui-txt-center btn_full_purchase" data-goodid="<%=goods_id%>">
-						全价购买
-				</div>
+				<!--<div class="ui-txt-line-height-30 bg_fd7a44 ui-txt-white ui-border-radius-3-->
+				 <!--ui-txt-center btn_full_purchase" data-goodid="<%=goods_id%>">-->
+						<!--全价购买-->
+				<!--</div>-->
 
-		</section>
+		<!--</section>-->
 		<%
 
 		}
@@ -205,14 +207,14 @@
 								</div>
 						</li>
 
-						<li class="" data-id="3" data-href="share">
-								<div class="ui-avatar">
-										<span style="background-image:url('assets/image/announced/img_details_share@2x.png')"></span>
-								</div>
-								<div class="ui-list-info ui-border-t">
-										<h4 class="ui-nowrap name">晒单分享</h4>
-								</div>
-						</li>
+						<!--<li class="" data-id="3" data-href="share">-->
+								<!--<div class="ui-avatar">-->
+										<!--<span style="background-image:url('assets/image/announced/img_details_share@2x.png')"></span>-->
+								<!--</div>-->
+								<!--<div class="ui-list-info ui-border-t">-->
+										<!--<h4 class="ui-nowrap name">晒单分享</h4>-->
+								<!--</div>-->
+						<!--</li>-->
 
 				</ul>
 
@@ -238,14 +240,24 @@
 
 				<!--夺宝人数未满，揭晓未开始-->
 				<div class="ui-row ui-txt-line-height-24 ui-txt-white announced_not_start">
+					<%
+					if(support_buy==1){    //1 支持原价购买 0 不支持原价购买
+					%>
+					<div class="bg_02B35A ui-border-radius-3 f_left btn_full_purchase addCart" data-goodid="<%=goods_id%>" data-goodid="<%=goods_id%>">
+						buy width￥<%=goods_price%>
+					</div>
+					<%
 
-						<div class="bg_fd7a44 ui-border-radius-3 f_left btn_buy">
-								立刻购买
+					}
+					%>
+						<div class="bg_FF7400 ui-border-radius-3 f_right btn_buy">
+							Go! it Now
 						</div>
 
-						<div class="bg-pink ui-border-radius-3 f_right btn_join_list">
-								加入清单
-						</div>
+						<!--<div class="bg_FF7400 ui-border-radius-3 f_right btn_join_list">-->
+								<!--加入清单-->
+						<!--</div>-->
+
 				</div>
 
 		</section>

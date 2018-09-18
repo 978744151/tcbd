@@ -33,7 +33,6 @@ define(['zepto', 'underscore', 'backbone',
 				});
 			},
 			events: {
-
 				"tap .text-tap": "textFunction",
 
 				"tap .good_search": "goodSearch",

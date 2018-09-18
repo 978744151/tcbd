@@ -9,17 +9,18 @@
 
 <script id="announced_info_item" type="text/template">
 
-		<section class="mxep_block">
+		<section class="mxep_block" style="margin: 0;">
 
 				<div class="icon_line">
-						<i class="ui-icon-return" onclick="history.back();"></i>
-						<i class="ui-icon-shoppingCart">
-								<div class="ui-badge shopping_cart_good_count">0</div>
-						</i>
-						<i class="ui-icon-share"></i>
-				</div>
+					<img src="../../../assets/image/ic_back@3x.png" alt="" onclick="history.back();" width=24px height=24px; class="ic_back_return">
+					<!--<i class="ui-icon-return" ></i>-->
+					<!--<i class="ui-icon-shoppingCart">-->
+					<!--<div class="ui-badge shopping_cart_good_count">0</div>-->
+					<!--</i>-->
 
-				<div class="swiper-container good_img_list">
+					<img src="../../../assets/image/ic_fenxiang@3x.png" alt="" class="duobao_info_show" width=24px height=24px;>
+				</div>
+				<div class="swiper-container good_img_list" style="height: 250px;">
 						<div class="swiper-wrapper">
 							<%
 								if(pictures && pictures.length > 0) {
@@ -47,7 +48,7 @@
 
 		<section class="mxep_block bg_white ui-all-whitespace ui-margin-b-20">
 
-				<div class="bg_white good_name">
+				<div class="bg_white good_name" style="font-size: 16px;color: #555555;">
 						<%=name%>
 				</div>
 
@@ -296,14 +297,14 @@
 								</div>
 						</li>
 
-						<li class="" data-id="3" data-href="share">
-								<div class="ui-avatar">
-										<span style="background-image:url('assets/image/announced/img_details_share@2x.png')"></span>
-								</div>
-								<div class="ui-list-info ui-border-t">
-										<h4 class="ui-nowrap name">晒单分享</h4>
-								</div>
-						</li>
+						<!--<li class="" data-id="3" data-href="share">-->
+								<!--<div class="ui-avatar">-->
+										<!--<span style="background-image:url('assets/image/announced/img_details_share@2x.png')"></span>-->
+								<!--</div>-->
+								<!--<div class="ui-list-info ui-border-t">-->
+										<!--<h4 class="ui-nowrap name">晒单分享</h4>-->
+								<!--</div>-->
+						<!--</li>-->
 
 				</ul>
 

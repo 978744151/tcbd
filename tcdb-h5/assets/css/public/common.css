@@ -46,7 +46,11 @@
 .ui-margin-b-5 {
 	margin-bottom: 5px;
 }
-
+.ic_back_return{
+	position: absolute;
+	top: 12px;
+	left:12px;
+}
 .ui-margin-b-20 {
 	margin-bottom: 10px;
 }

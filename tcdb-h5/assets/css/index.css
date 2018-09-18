@@ -82,7 +82,7 @@ body,html{
 }
 
 .mxep_block {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .mxep_block_bottom {
@@ -380,6 +380,11 @@ body,html{
 	font-size: 30px;
 	color: #FF7400;
 }
+.ic_back_return{
+	position: absolute;
+	top: 12px;
+	left:12px;
+}
 .My_center .myCate button{
 	background: #FF7400;
 	border-radius: 5px;
@@ -387,7 +392,7 @@ body,html{
 	height: 36px;
 	position: absolute;
 	right: 15px;
-	top: 20px;
+	top: 30px;
 	border: none;
 	color:white;
 }
@@ -1691,8 +1696,11 @@ section.mxep_block.user_info_container .personal_info .recharge:before {
 	left: 0;
 	width: 100%;
 	height: 50px;
-	background-color: rgba(255, 255, 255, 0.3);
+	/*background-color: rgba(255, 255, 255, 0.3);*/
 	z-index: 3;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
 }
 
 .announced-info-css section.mxep_block .ui-icon-return {
@@ -1931,13 +1939,19 @@ section.mxep_block.user_info_container .personal_info .recharge:before {
 }
 
 .announced-info-css section.mxep_block.announced_operate .announced_not_start .btn_buy,
-.announced-info-css section.mxep_block.announced_operate .announced_not_start .btn_join_list {
+.announced-info-css section.mxep_block.announced_operate .announced_not_start .btn_join_list,
+.addCart{
 	width: 40%;
 	margin: 0 5%;
 	padding: 8px 0;
 	text-align: center;
 }
-
+.announced_not_start .addCart{
+	width: 40%;
+	margin: 0 5%;
+	padding: 8px 0;
+	text-align: center;
+}
 .announced-info-css section.mxep_block.announced_operate .announced_other {
 	display: block;
 }
@@ -2041,8 +2055,11 @@ section.mxep_block.user_info_container .personal_info .recharge:before {
 	left: 0;
 	width: 100%;
 	height: 50px;
-	background-color: rgba(255, 255, 255, 0.3);
+	/*background-color: rgba(255, 255, 255, 0.3);*/
 	z-index: 3;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
 }
 
 .duobao-info-css section.mxep_block .ui-icon-return {
@@ -2296,11 +2313,15 @@ section.mxep_block.user_info_container .personal_info .recharge:before {
 .past-announced-css .bg_fd7a44 {
 	background-color: #fd7a44;
 }
-
+.bg_02B35A{
+	background-color: #02B35A;
+}
 .past-announced-css .bg_fff4ee {
 	background-color: #fff4ee;
 }
-
+.bg_FF7400{
+	background-color: #FF7400;
+}
 .past-announced-css .bg_f0f0f0 {
 	background-color: #f0f0f0;
 }
@@ -3019,7 +3040,10 @@ section.mxep_block.user_info_container .personal_info .recharge:before {
 	top: 0;
 	left: 0;
 	z-index: 5;
-	background-color: rgba(255, 255, 255, 0.5);
+	/*background-color: rgba(255, 255, 255, 0.5);*/
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
 }
 
 .discount-good-info-css section.mxep_block .ui-icon-return {

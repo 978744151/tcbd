@@ -851,7 +851,11 @@ h6, .ui-txt-tips {
 .ui-grid-trisect-img.active, .ui-grid-halve-img.active {
 	opacity: .5;
 }
-
+.ic_back_return{
+	position: absolute;
+	top: 12px;
+	left:12px;
+}
 .ui-row {
 	display: block;
 	overflow: hidden;
