@@ -158,8 +158,9 @@ define(['zepto', 'underscore', 'backbone',
 
 
 		//保存
-		var toSaveAddress = function () {
+		var toSaveAddress = function (event) {
 			// 省10 江苏  106 苏州 3876 工业园区
+			event.stopPropagation();
 			var str = '';
 			if(addressId){
 				str = "id=" + addressId;

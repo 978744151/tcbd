@@ -38,6 +38,7 @@ define(['zepto', 'underscore', 'backbone',
                 "tap .personal_info .item":"aboutMoney",
                 //查询 夺宝记录，中奖纪录 ..   我的晒单，充值记录....
                 "tap ul li": "queryRecords",
+                "tap .myIntegral":"myIntegral"
               
             }, 
 
@@ -47,7 +48,10 @@ define(['zepto', 'underscore', 'backbone',
                 utils.storage.set("fromMy","my");
                 window.location.href = window.LOGIN_REDIRECT_URL;
             },
+            myIntegral: function(e){
 
+                window.location.hash = "myIntegral";
+            },
             mySetting: function(e){
                 window.location.hash = "mySetting";
             },

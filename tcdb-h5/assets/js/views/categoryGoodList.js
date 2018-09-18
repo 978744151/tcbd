@@ -105,6 +105,8 @@ define(['zepto', 'underscore', 'backbone',  'swiper', 'echo',
 
         //商品列表
         var getGoodList = function(){
+            var cateName = localStorage.getItem('cateName')
+            $('.category-good-name').text(cateName)
             if(type =="up"){
 
                 $dropload.noData(false);

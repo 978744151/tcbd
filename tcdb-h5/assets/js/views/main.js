@@ -33,7 +33,12 @@ define(['zepto', 'underscore', 'backbone',
 				});
 			},
 			events: {
+
 				"tap .text-tap": "textFunction",
+
+
+				//"tap .text-tap": "textFunction",
+
 
 				"tap .good_search": "goodSearch",
 
@@ -55,7 +60,7 @@ define(['zepto', 'underscore', 'backbone',
 			},
 
 			textFunction: function () {
-				console.log("text-tap");
+
 			},
 
 			goodSearch: function () {
@@ -64,7 +69,6 @@ define(['zepto', 'underscore', 'backbone',
 			},
 
 			tabBarList: function (e) {
-
 				e.stopImmediatePropagation();
 
 				$this = $(e.currentTarget);
@@ -191,7 +195,7 @@ define(['zepto', 'underscore', 'backbone',
 
 			Api.getIndianaGoods(param,
 				function (successData) {
-					//console.log(successData);
+					console.log(successData);
 
 					if (successData.result.data.length > 0) {
 
@@ -222,15 +226,15 @@ define(['zepto', 'underscore', 'backbone',
 				}, function (errorData) {
 
 
-				});
+				})
+
 		};
 
 		//初始化首页数据
 		var initData = function () {
-
 			Api.getHomeData(null,
 				function (successData) {
-					
+					console.log(successData)
 					var template = _.template($("#main_item").html());
 					$(".main_contain").empty().append(template(successData.result));
 					$(".main_contain").show();
@@ -250,8 +254,45 @@ define(['zepto', 'underscore', 'backbone',
 				function (errorData) {
 
 				});
+				category()
 		};
+		function category(){
+			var param = null
+			Api.getCategories(param,function (data) {
+				console.log(data.result)
+				var result = data.result.data
+				var html =  ""
+				for(var i = 0;i<result.length;i++){
+					html+= '<li class=" ui-txt-line-height-30 text-tap" data-id='+result[i].id +' data-name='+result[i].name +'>'
+					html+= '<div class="ui-icon">'
+					html+= '<img src='+result[i].icon +'>'
+					html+= '</div>'
+					html+= '<span class="ui-txt-default">'+ result[i].name +'</span>'
+					html+= '</li>'
+				}
+				$('.tab_bar_cate').html(html)
 
+				var width = $('body').width()
+				var liWidth = width * 0.9 / 4
+				$('.text-tap').css('width',liWidth)
+				mui('.mui-scroll-wrapper').scroll({
+					deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+				});
+			})
+			var timeoutflag = null;
+			$('body').on('tap','.text-tap', function () {
+				var $that = $(this)
+				if(timeoutflag != null){
+					clearTimeout(timeoutflag);
+				}
+				timeoutflag=setTimeout(function(){
+					var cateId = $that.data('id')
+					var cateName = $that.data('name')
+					window.location.hash = "categoryGoodList/" + cateId;
+					localStorage.setItem('cateName',cateName)
+				},300);
+			});
+		}
 		var asynLoadImage = function () {
 			echo.init({
 				throttle: 250,
@@ -282,6 +323,7 @@ define(['zepto', 'underscore', 'backbone',
 						getIndianaGoods();
 					}
 				});
+
 			},
 
 			lock: function () {
@@ -305,6 +347,7 @@ define(['zepto', 'underscore', 'backbone',
 		var bannerEvent = function () {
 
 			var mySwiper = new Swiper('.banner_img_list', {
+				passiveListeners: false,
 				initialSlide: 1,//设定初始化时slide的索引。
 				direction: 'horizontal',//Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)
 				speed: 300,//滑动速度，即slider自动滑动开始到结束的时间（单位ms）
