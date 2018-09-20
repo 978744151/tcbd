@@ -112,6 +112,21 @@ requirejs.config({
 	},
 	urlArgs: "v=" + window.assetVersion
 });
+
+
+function isWeiXin() {
+	var ua = window.navigator.userAgent.toLowerCase();
+	if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// Start the router
+requirejs(['router'], function (Router) {
+	Router.initialize();
+});
 function lan(country){
     if(country == 1){
         language = {
@@ -284,17 +299,3 @@ function lan(country){
         }
     return language
 }
-console.log(lan(2).product);
-function isWeiXin() {
-	var ua = window.navigator.userAgent.toLowerCase();
-	if (ua.match(/MicroMessenger/i) == 'micromessenger') {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-// Start the router
-requirejs(['router'], function (Router) {
-	Router.initialize();
-});

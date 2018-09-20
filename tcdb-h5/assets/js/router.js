@@ -24,15 +24,17 @@ define([
 		},
 		routes: {
 			// Define some URL routes
-			'main': 'loadMainPage',
             //语言
 			//揭晓
 			'announced': 'loadAnnouncedPage',
+			'main': 'loadMainPage',
+
 			//测试
-			'ceshi': 'loadCeshi',
+			'recharges': 'loadrecharges',
 			//揭晓 详情
 			'announcedInfo(/:auction_id)(/:auction_date_id)': 'loadAnnouncedInfoPage',
-
+			//发现
+			'discover': 'loaddiscover',
 			//夺宝商品 详情
 			'duobaoInfo(/:good_no)': 'loadDuobaoInfoPage',
 
@@ -315,7 +317,7 @@ define([
 		},
 		loadLanguage: function () {
 			utils.hideMenu();
-			requirejs(['views/language'], function (gameDzp) {
+			requirejs(['views/language'], function (language) {
 				if (!Views.languageView) {
 					Views.languageView = new language();
 				}
@@ -403,15 +405,7 @@ define([
 				Views.duobaoInfoView.render(good_no);
 			});
 		},
-		loadCeshi: function () {
-			utils.hideMenu();
-			requirejs(['views/ceshi'], function () {
-				if (!Views.ceshiView) {
-					Views.ceshiView = new ceshi();
-				}
-				Views.ceshiView.render();
-			});
-		},
+
 		//往期揭晓
 		loadPastAnnouncedPage: function (good_no) {
 			utils.hideMenu();
@@ -884,7 +878,24 @@ define([
 				Views.aboutusView.render();
 			});
 		},
-
+		loadrecharges: function () {
+			utils.hideMenu();
+			requirejs(['views/recharges'], function (recharges) {
+				if (!Views.rechargesView) {
+					Views.rechargesView = new recharges();
+				}
+				Views.rechargesView.render();
+			});
+		},
+		loaddiscover: function () {
+			utils.hideMenu();
+			requirejs(['views/discover'], function (discover) {
+				if (!Views.discoverView) {
+					Views.discoverView = new discover();
+				}
+				Views.discoverView.render();
+			});
+		},
 		//支付成功
 		loadOrderPaySuccessPage: function (type) {
 			utils.hideMenu();

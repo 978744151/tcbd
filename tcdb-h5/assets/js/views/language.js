@@ -1,24 +1,35 @@
-define(['zepto', 'underscore', 'backbone',
-        'swiper', 'echo','app/api', 'app/refreshtoken',
-        'app/utils',
+define(
+    [
+        'zepto', 'jquery', 'underscore', 'backbone', 'urlGroup',
+        'swiper', 'echo', 'app/api', 'app/basket',
+        'app/utils', 'app/scroll',
         'text!templates/language.html'
     ],
 
-    function($, _, Backbone, Swiper, echo, Api, Token, utils, myTemplate) {
+    function($, Jquery, _, Backbone, UrlGroup, Swiper, echo, Api, basket, utils, scroll,
+             language) {
 
         var $page = $("#main-language");
-        var type =1;//需要先判断是否登陆
-        var $categoryList;
-        var $usserInfoContaniter;
-        var $userInfoItem;
-        var imageRenderToken = null;
         var languageView = Backbone.View.extend({
             el: $page,
-            render: function (id, name) {
-
+            render: function () {
+                utils.showPage($page, function () {
+                    $page.empty().append(language);
+                    languageBottom()
+                });
             },
+
+
         })
-
-
+        var languageBottom = function () {
+            $('.languageBottom div').on('tap', function () {
+                console.log($(this));
+                var $this = $(this);
+                $this.addClass('active').siblings().removeClass('active')
+            })
+            $('.languageGo').on('tap', function () {
+                window.location.hash = 'main'
+            })
+        }
         return languageView;
     });

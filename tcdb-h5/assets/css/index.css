@@ -6,15 +6,25 @@ body,html{
 	width: 100%;
 	height: 100%;
 	background: rgba(0,0,0,0.5);
-	position: absolute;
+	position: fixed;
 	top: 0;
 	bottom: 0;
-	z-index: 10;
+	z-index: 99;
 	display: none;
+}
+.index_box_close{
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	margin: 30px auto;
+}
+.index_box_close img{
+	width: 100%;
+	height: 100%;
 }
 .index_yy .index_box{
 	position: absolute;
-	top: 25%;
+	top: 20%;
 	left: 50%;
 	transform: translatex(-50%);
 	width: 80%;
@@ -42,7 +52,12 @@ body,html{
 	height: 36px;
 	background: #FF7400;
 	border-radius: 100px;
-	line-height: 36px;
+	line-height: 24px;
+	font-family: PingFang-SC-Medium;
+	font-size: 15px;
+	color: #FFFFFF;
+	letter-spacing: 0;;
+	border: none;
 }
 .main-css img {
 	width: 100%;
@@ -4189,8 +4204,211 @@ section.mxep_block.user_info_container .personal_info .recharge:before {
     height: 40px;
 }
 
+ /*语言*/
+#main-language{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
 
+}
+.languageBox{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+.languageBox .languageTop{
+	width: 100%;
+	height: 250px;
+	background-image: linear-gradient(-136deg, #FF7400 0%, #E75308 100%);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+.languageBox .languageTop img{
+	height: 123px;
+	margin-top: 30px;
+}
+.languageBox .languageTop h4{
+	position: absolute;
+	top: 15px;
+	color: white;
+}
+.languageBox .languageBottom div{
+	width: 260px;
+	height: 80px;
+	background-color: #fff;
+	color: black;
+	font-size: 16px;
+	text-align: center;
+	line-height: 80px;
+	margin: auto;
+	border-radius: 100px;
+	border: 1px solid #D0D0D0;
+	margin-top: 20px;
+}
+.languageBox .languageBottom div.active{
+	width: 260px;
+	height: 80px;
+	background-color: #FF7400;
+	color: #ffffff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 80px;
+	margin: auto;
+	border-radius: 100px;
+	/*border: 1px solid #D0D0D0;*/
+	margin-top: 20px;
+}
+.languageBox .languageGo{
+	width: 100px;
+	height: 100px;
+	background-color: #FF7400;
+	text-align: center;
+	line-height: 100px;
+	margin: auto;
+	border-radius: 50%;
+	margin-top: 50px;
+	font-family: PingFang-SC-Medium;
+	font-size: 20px;
+	color: #FFFFFF;
+}
+/*充值*/
+#recharges{
 
+}
+.recharges_box{
+}
+.recharges_box .recharges_box_top{
+	width: 100%;
+	height: 172px;
+ 	background-image: linear-gradient(-136deg, #FF7400 0%, #E75308 100%);
+	text-align: center;
+	padding-top: 10px;
+}
+.recharges_box .recharges_box_top p{
+	font-family: PingFang-SC-Medium;
+	font-size: 18px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+}
+.recharges_box .recharges_box_top span{
+	font-family: PingFang-SC-Medium;
+	font-size: 15px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	display: inline-block;
+	/* margin-top: 10px; */
+	padding: 25px 40px 0px 50px;
+	text-align: left;
+}
+.recharges_box .recharges_box_top_icon{
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	left: 12px;
+	top: 80px;
+}
+.recharges_box .recharges_content{
+	padding-left:12px;
+	background-color: #fff;
+	padding-bottom: 10px;
+}
+.recharges_box .recharges_content .recharges_div{
+	height: 40px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.recharges_box .recharges_content .recharges_content_Select{
+	line-height: 40px;
+	font-family: PingFang-SC-Medium;
+	font-size: 16px;
+	color: #555555;
+}
+.recharges_box .recharges_content .recharges_content_baht{
+	display: flex;
+	justify-content: space-between;
+	padding-right: 20px;
+	flex-wrap: wrap;
+
+}
+.recharges_box .recharges_content .recharges_content_baht span{
+	margin-top: 10px;
+	display: inline-block;
+	background: #EEEEEE;
+	border-radius: 4px;
+	width: 100px;
+	height: 34px;
+	font-family: PingFang-SC-Regular;
+	font-size: 13px;
+	color: #555555;
+	text-align: center;
+	line-height: 34px;
+
+}
+.recharges_box .recharges_content .recharges_content_baht span.active{
+	display: inline-block;
+	background: #FF7400;
+	border-radius: 4px;
+	width: 100px;
+	height: 34px;
+	font-family: PingFang-SC-Regular;
+	font-size: 13px;
+	color: #fff;
+	text-align: center;
+	line-height: 34px;
+}
+.recharges_content .recharges_pay_div{
+	display: flex;
+	height: 40px;
+	width: 100%;
+	margin-bottom: 10px;
+	line-height: 40px;
+	align-items: center;
+	justify-content: space-between;
+}
+.recharges_content .recharges_pay_div div{
+	display: flex;
+}
+.recharges_content .recharges_pay_div img{
+	width: 36px;
+	height: 36px;
+}
+.recharges_content .recharges_pay_div span{
+	margin-left: 10px;
+}
+.recharges_content_go{
+	height: 50px;
+	position: fixed;
+	background: white;
+	justify-content: space-between;
+	bottom: 0px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	padding: 0px 12px;
+}
+.recharges_content_go button{
+	width: 128px;
+	height: 34px;
+	line-height: 22px;
+	text-align: center;
+	background: #FF7400;
+	border-radius: 4px;
+	font-size: 16px;
+	color:white;
+}
+.rechargesCheckbox{
+	width: 22px;
+	height: 22px;
+	background: url('../../../assets/image/ic_xuan_normal@3x.png') no-repeat 100% 100%;
+	background-size: contain;
+}
+.rechargesCheckbox.active {
+	width: 22px;
+	height: 22px;
+	background: url('../../../assets/image/ic_xuan_press@3x.png') no-repeat 100% 100%;
+	background-size: contain;
+}
 /**
 * 同城夺宝
 * end
