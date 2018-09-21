@@ -317,7 +317,11 @@ define([
 		},
 		loadLanguage: function () {
 			utils.hideMenu();
+<<<<<<< Updated upstream
 			requirejs(['views/language'], function (language) {
+=======
+			requirejs(['views/language'], function () {
+>>>>>>> Stashed changes
 				if (!Views.languageView) {
 					Views.languageView = new language();
 				}
@@ -405,7 +409,19 @@ define([
 				Views.duobaoInfoView.render(good_no);
 			});
 		},
+<<<<<<< Updated upstream
 
+=======
+		loadCeshi: function () {
+			utils.hideMenu();
+			requirejs(['views/ceshi'], function (ceshi) {
+				if (!Views.ceshiView) {
+					Views.ceshiView = new ceshi();
+				}
+				Views.ceshiView.render();
+			});
+		},
+>>>>>>> Stashed changes
 		//往期揭晓
 		loadPastAnnouncedPage: function (good_no) {
 			utils.hideMenu();

@@ -22,6 +22,7 @@ define(
 			render: function () {
 				//utils.hideMenu();
 				utils.showPage($page, function () {
+					console.log($page)
 					handlers = [];
 					$page.hide();
 					$page.empty().append(announcedTemplate);
